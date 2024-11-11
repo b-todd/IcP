@@ -1,0 +1,544 @@
+@import url("/base-styles.css");
+
+:root {
+      /* SEMANTICS (applied primitive colors) */
+      --text-primary: var(--bluegray-700);
+      --text-secondary:var(--bluegrey-700);
+      --border-radius:.5rem;
+
+     /* PRIMARY COLOR DEFINED HERE */
+     /* Doing it like this because it helps change states with calculations rather than direct colors */
+      --primary-h: 217;
+      --primary-s: 91%;
+      --primary-b: 60%;
+      --primary: hsl(var(--primary-h), var(--primary-s), var(--primary-b));
+     
+      /* SECONDARY COLOR DEFINED HERE */
+      --secondary-h: 189;
+      --secondary-s: 95%;
+      --secondary-b: 36%;
+      --secondary:hsl(var(--secondary-h), var(--secondary-s), var(--secondary-b));
+
+      /* CONTRAST COLOR DEFINED HERE */
+      /* This one's to work anytime */
+      --contrast-h: 214;
+      --contrast-s: 16%;
+      --contrast-b: 26%;
+      --contrast: hsl(var(--contrast-h), var(--contrast-s), var(--contrast-b));
+
+      --Success:hsl(173, 80%, 40%);;
+      --Warning:hsl(25, 95%, 53%);;
+      --Info: var(--primary);
+      --Help:#3B82F6;
+      --Danger:#101c30;
+      --Contrast:#282e38;
+      /* CARD */
+      --surface-ground:#eff3f8;
+      --surface-section:#ffffff;
+      --surface-card:#ffffff;
+      --surface-overlay:#ffffff;
+      --surface-border:#dfe7ef;
+      --surface-hover:#f6f9fc;
+}
+
+/* TEXT DESIGN */
+
+h1,h2,h3,h4,h5,h6,p {
+     color: var(--text-primary);
+}
+
+h2 {
+     font-size: 2rem;
+     font-weight: 375;
+}
+
+p {
+     font-size: 1rem;
+     padding-top: 1rem;
+     line-height: 125%;
+}
+
+/* BUTTON STUFF */
+
+button {
+     /*margin: .5rem; /*remove after prototyping is done */
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     gap: .5rem;
+     border-radius: var(--border-radius);
+     border: none;
+     padding: .5rem 1rem;
+     font-weight: 500;
+     font-size: 1rem;
+     transition: 0.25s;
+
+     /* Set the border highlight size on press */
+     --border-press: 5px;
+
+     &.sm {
+          padding: .25rem .5rem;
+          font-size: 0.875rem;
+          & .material-icons {
+               font-size: .875rem;
+          }
+     }
+
+     &.lg {
+          padding: .75rem 1.25rem;
+          font-size: 1.125rem;
+          & .material-icons {
+               font-size: 1.75rem;
+          }
+     }
+
+     &.raised {
+          box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.30);
+          &:hover {
+               box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.25);
+               transform: translate(-1px, -1px);
+          }
+          &:active {
+               transition: 0.05s;
+               box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.30);
+               transform: translate(1px, 1px);
+
+          }
+     }
+
+     &.round {
+          border-radius: 1000px;
+          padding: .5rem;
+     }
+
+     &.solid {  
+          color: var(--surface-0);
+          
+          &.primary {
+               background-color: var(--primary);
+               &:hover {
+                    background-color: hsl(var(--primary-h), var(--primary-s), calc(var(--primary-b) - 5%));
+               }
+               &:active {
+                    background-color: hsl(var(--primary-h), var(--primary-s), calc(var(--primary-b) - 10%));
+                    outline: var(--border-press) solid hsl(var(--primary-h), var(--primary-s), calc(var(--primary-b) + 30%));
+               }
+          }
+          &.secondary {
+               background-color: var(--secondary);
+               &:hover {
+                    background-color: hsl(var(--secondary-h), var(--secondary-s), calc(var(--secondary-b) -  5%));
+               }
+               &:active {
+                    background-color: hsl(var(--secondary-h), var(--secondary-s), calc(var(--secondary-b) - 10%));
+                    outline: var(--border-press) solid hsl(var(--secondary-h), var(--secondary-s), calc(var(--secondary-b) + 50%));
+               }
+          }
+          &.contrast {
+               background-color: var(--contrast);
+               &:hover {
+                    background-color: hsl(var(--contrast-h), var(--contrast-s), calc(var(--contrast-b) - 7%));
+               }
+               &:active {
+                    background-color: hsl(var(--contrast-h), var(--contrast-s), calc(var(--contrast-b) - 10%));
+                    outline: var(--border-press) solid hsl(var(--contrast-h), var(--contrast-s), calc(var(--contrast-b) + 40%));
+               }
+          }
+     }
+
+     &.outline {
+          &.primary {
+               color: var(--primary);
+               background-color: hsl(var(--primary-h), var(--primary-s), calc(var(--primary-b) + 40%));
+               border: 1px solid var(--primary);
+               &:hover {
+                    background-color: hsl(var(--primary-h), var(--primary-s), calc(var(--primary-b) + 35%));
+               }
+               &:active {
+                    background-color: hsl(var(--primary-h), var(--primary-s), calc(var(--primary-b) + 30%));
+                    outline: 5px solid hsl(var(--primary-h), var(--primary-s), calc(var(--primary-b) + 35%));
+               }
+          }
+          &.secondary {
+               color: hsl(var(--secondary-h), calc(var(--secondary-s)), calc(var(--secondary-b)));
+
+               background-color: hsl(var(--secondary-h), var(--secondary-s), calc(var(--secondary-b) + 100%));
+
+               border: 1px solid var(--secondary);
+               &:hover {
+                    background-color: hsl(var(--secondary-h), var(--secondary-s), calc(var(--secondary-b) + 40%));
+               }
+               &:active {
+                    background-color: hsl(var(--secondary-h), var(--secondary-s), calc(var(--secondary-b) + 30%));
+                    outline: 5px solid hsl(var(--secondary-h), var(--secondary-s), calc(var(--secondary-b) + 15%));
+                    color: hsl(var(--secondary-h), calc(var(--secondary-s)), calc(var(--secondary-b) - 25%))
+               }
+          }
+          &.contrast {
+               color: var(--contrast);
+               background-color: transparent;
+               border: 1px solid var(--contrast);
+               &:hover {
+                    background-color: hsl(var(--contrast-h), var(--contrast-s), calc(var(--contrast-b) + 69%));
+               }
+               &:active {
+                    background-color: hsl(var(--primary-h), var(--primary-s), calc(var(--primary-b) + 30%));
+                    outline: 5px solid hsl(var(--primary-h), var(--primary-s), calc(var(--primary-b) + 35%));
+               }
+          }
+          
+          
+     }
+
+     &.plain {
+          &.primary{
+
+          }
+          &.secondary{
+               
+          }
+          &.contrast {
+               color: var(--contrast);
+               background-color: transparent;
+               &:hover {
+                    background-color: hsl(var(--contrast-h), var(--contrast-s), calc(var(--contrast-b) + 55%));
+               }
+               &:active {
+                    background-color: hsl(var(--contrast-h), var(--contrast-s), calc(var(--contrast-b) + 50%));
+                    outline: 3px solid hsl(var(--contrast-h), var(--contrast-s), calc(var(--contrast-b) + 35%));
+               }
+          }
+     }
+
+
+}
+
+/* USER INPUT STUFF */
+input{
+     transition: .25s;
+     & textarea {
+          color: orange;
+          padding: 12rem;
+     }
+     &[type=text] {
+          padding: .5rem;
+          border-radius: .25rem;
+          border: 1px solid var(--bluegray-200);
+          margin: .35rem 0;
+          font-size: 1rem;
+        }
+        &:hover {
+          background-color:var(--bluegray-50);
+          border: 1px solid hsl(var(--primary-h), var(--primary-s), var(--primary-b));
+        }
+        &:active {
+          border: 1px solid hsl(var(--primary-h), var(--primary-s), var(--primary-b));
+          outline: 3px solid hsl(var(--primary-h), var(--primary-s), var(--primary-b));
+        }
+        &:focus {
+          background-color:var(--surface-0);
+          outline: 3px solid hsl(var(--primary-h), var(--primary-s), calc(var(--primary-b) + 30%));
+        }
+}
+
+body {
+     transition: .5s;
+     margin-left: 320px;
+     padding: ;
+     background-color: var(--bluegray-50);
+}
+
+#Sidenav {
+     position: fixed;
+     left: 0px;
+     width: 320px;
+     height: 100vh;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     color: var(--surface-0);
+     background-color: hsl(var(--primary-h), var(--primary-s), calc(var(--primary-b) - 30%));
+     & .navtitle {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          padding: 1rem;
+          gap: .5rem;
+          font-size: 1.5rem;
+     }
+     & h3 {
+          color: var(--surface-0);
+          font-weight: 300;
+     }
+     & .menuName {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 1rem;
+          justify-content: space-between;
+          font-size: 1.5rem;
+          padding: .25rem 1rem;
+          & button {
+               display: none;
+          }
+          & h3 {
+               opacity:.3;
+          }
+     }
+     & ul {
+          & li {
+               transition: .25s;
+               display: flex;
+               align-items: center;
+               gap: 1rem;
+               padding: 1rem;
+               background-color: hsl(var(--primary-h), var(--primary-s), calc(var(--primary-b) - 30%));
+               & p {
+                    color: var(--surface-0);
+                    font-weight: 400;
+                    margin-top: -.5rem;
+               }
+               & span:last-child {
+                    position: fixed;
+                    left: 250px;
+               }
+               &:hover {
+                    background-color: hsl(var(--primary-h), var(--primary-s), calc(var(--primary-b) - 25%));
+               }
+               &:active {
+                    background-color: hsl(var(--primary-h), var(--primary-s), calc(var(--primary-b) - 20%));
+                    outline: 2px solid hsl(var(--primary-h), var(--primary-s), calc(var(--primary-b) + 30%));
+               }
+          }
+          
+     }
+     & .secondnav {
+          color: pink;
+     }
+     
+}
+
+header {
+     padding: 1.5rem;
+     background-color: hsl(var(--primary-h), var(--primary-s), calc(var(--primary-b) + 30%));
+     & div {
+          margin: auto;
+          display: flex;
+          flex-direction:row;
+          align-items: center;
+          gap: 1rem;
+          max-width: 1080px;
+          color: var(--text-secondary);
+          & :nth-child(1) {
+               color: var(--primary);
+               font-size: 2rem;
+          }
+          & :nth-child(2) {
+               font-weight: 500;
+          }
+     }
+}
+
+main {
+     margin: auto;
+     padding: 2.25rem;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     gap: 1.5rem;
+     max-width: 1142px;
+}
+
+section {
+     background-color: var(--surface-0);
+     border-radius: var(--border-radius);
+     box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.10);
+
+     display: flex;
+     flex-direction: column;
+     gap: 1.5rem;
+     padding: 1.5rem;     
+}
+
+.tab {
+     display: flex;
+     border-bottom: 3px solid hsl(var(--contrast-h), var(--contrast-s), calc(var(--contrast-b) + 65%));
+     
+     /* Style the buttons that are used to open the tab content */
+     & button {
+          color: var(--bluegray-400);
+          background-color: inherit;
+          border-radius: var(--border-radius) var(--border-radius) 0rem 0rem;
+          cursor: pointer;
+          padding: 1rem 1.5rem;
+          transition: 0.3s;
+          & .material-icons {
+               font-size:1rem;
+          }
+          /* Change background color of buttons on hover */
+          &:hover {
+               background-color: var(--bluegray-50);
+               color: var(--bluegray-800);
+          }
+     }
+   }
+   
+   /* Create an active/current tablink class */
+   .tab button.active {
+          color: hsl(var(--primary-h), var(--primary-s), var(--primary-b));
+          border-bottom: 3px solid;
+          padding: 1rem 1.5rem;
+          margin-bottom: -3px;       
+   }
+   
+   /* Style the tab content */
+   .tabcontent {
+     display: flex;
+     flex-direction: column;
+     gap: 1rem;
+   }
+ /*  
+.tablist {
+     display: flex;
+     border-bottom: 3px solid hsl(var(--contrast-h), var(--contrast-s), calc(var(--contrast-b) + 65%)); ; 
+
+     & button.tab {
+          background-color: transparent;
+          border-top: none;
+          border-left: none;
+          border-right: none;
+          border-bottom: 3px solid;
+          padding: 1rem 1.5rem;
+          margin-bottom: -3px;
+          border-radius: var(--border-radius) var(--border-radius) 0rem 0rem;
+          & .material-icons {
+               font-size:1rem;
+          }
+     }
+
+     & button.tab.unselected {
+          border-bottom: 3px solid hsl(var(--contrast-h), var(--contrast-s), calc(var(--contrast-b) + 65%));
+          font-weight: 400;
+     }
+}
+*/
+
+
+table {
+     color: var(--text-primary);
+     border-radius: .5rem;
+     overflow: hidden;
+     border-spacing: 0;
+     border: 1px solid var(--bluegray-100);
+     & th {
+          padding: .25rem .875rem;
+          background-color: var(--bluegray-50);
+          & p {
+          float: left;
+          text-align: left;
+          font-size: .875rem;
+          font-weight: 500;
+          margin-top: -.25rem;
+          padding-right: .25rem;
+          }
+          & button:first-child {
+               float: right;
+               margin-top: 
+          }
+     }
+     & tr {
+          transition: .15s;
+          &:hover {
+               background-color: hsl(var(--primary-h), var(--primary-s), calc(var(--primary-b) + 35%));
+          }
+          &:active {
+               background-color: hsl(var(--primary-h), var(--primary-s), calc(var(--primary-b) + 30%));
+          }
+          & td:first-child {
+               font-weight: 500;
+               width: 50%;
+          }
+     }
+     & td {
+          padding: .875rem;
+          border-bottom: 1px solid var(--bluegray-100);
+     }
+}
+
+.pagin {
+     background-color: ;
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     align-items: center;
+     flex-wrap: wrap;
+     gap: 1rem;
+     margin: -1px;
+     & p {
+          background-color: ;
+          font-size: 1rem;
+          margin-bottom: 1.25rem;
+     }
+     & input {
+          width: 10px;
+     }
+     & div {
+          background-color: ;
+          display: flex;
+          & button.contrast {
+               margin: -1px;
+               border-radius: 0;
+               border: 1px solid var(--bluegray-100);
+               &:first-child {
+                   border-radius: .25rem 0rem 0rem .25rem ; 
+               }
+               &:last-child {
+                    border-radius: 0rem .25rem .25rem 0rem ; 
+                }
+               &.selected {
+                    background-color: hsl(var(--primary-h), var(--primary-s), calc(var(--primary-b) + 35%));
+               }
+          }
+     }
+     & #pagination {
+          width: 80px;
+     }    
+}
+
+#testingbutton {
+     color:red;
+     position: absolute;
+     top: 12px;
+     right: 12px;
+}
+
+
+/*
+@media (max-width: 1200px) {
+     #Sidenav {
+          transition: .5s;
+          width: 3.75rem;
+          & .navtitle h3 {
+               display: none;
+          }
+          & ul {
+               & .menuName {
+                    opacity: 0;
+               }
+               & li {
+                    & p {
+                         display: none;
+                    }
+                    & :last-child {
+                         display: none;
+                    }
+                    
+               }
+          }
+               
+     }
+     body {
+          margin-left: 50px;
+     }
+     
+}

@@ -1,0 +1,585 @@
+<!doctype html>
+<html>
+     <head>
+          <script type="text/javascript" src="/Admin Portal/interactions.js"></script>
+          <link rel="stylesheet" href="/base-styles.css">
+          <link rel="stylesheet" href="/Admin Portal/semantic-styles-AP.css">
+          <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+          <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&icon_names=favorite,home,search,settings" rel="stylesheet" />
+     </head>
+
+     <nav class="sidenav" id="Sidenav">
+          <ul>
+               <div class="navtitle" >
+                    <span class="material-icons md-36">tune</span>
+                    <h3 id="navtitle">Admin Portal</h3>
+               </div>
+               <div class="menuName" id="menuName">
+                    <h3 >Menu</h3>
+                    <button class="solid primary" onclick="closeNav()">
+                         Close
+                         <span class="material-icons md-36">close</span>
+                    </button>
+               </div>
+               
+               <li>
+                    <span class="material-icons md-36"  >star</span>
+                    <p>Quick Access</p>
+                    <span class="material-icons md-36"  >chevron_right</span>
+               </li>
+               <li>
+                    <span class="material-icons md-36">group</span>
+                    <p>Customers</p>
+                    <span class="material-icons md-36">chevron_right</span>
+               </li>
+               <li>
+                    <span class="material-icons md-36">bolt</span>
+                    <p>Operations</p>
+                    <span class="material-icons md-36">chevron_right</span>
+               </li>
+               <li>
+                    <span class="material-icons md-36">notifications</span>
+                    <p>Notifications</p>
+                    <span class="material-icons md-36">chevron_right</span>
+               </li>
+               <li>
+                    <span class="material-icons md-36">tune</span>
+                    <p>Configurations</p>
+                    <span class="material-icons md-36">chevron_right</span>
+               </li>
+               <li>
+                    <span class="material-icons md-36">leaderboard</span>
+                    <p>Reports</p>
+                    <span class="material-icons md-36">chevron_right</span>
+               </li>
+               <li>
+                    <span class="material-icons md-36">payments</span>
+                    <p>Finance</p>
+                    <span class="material-icons md-36">chevron_right</span>
+               </li>
+               <li>
+                    <span class="material-icons md-36">cloud_upload</span>
+                    <p>Submission Manager</p>
+                    <span class="material-icons md-36">chevron_right</span>
+               </li>
+          </ul>
+          <ul class="secondnav">
+               <li>
+                    <span class="material-icons md-36">star</span>
+                    <p>John Smith <br>
+                    jsmith@incomm.com</p>
+               </li>
+               <li>
+                    <span class="material-icons md-36">settings</span>
+                    <p>Accounts & Settings</p>
+               </li>
+               <li>
+                    <span class="material-icons md-36">logout</span>
+                    <p>Log Out</p>
+
+               </li>
+          </ul>
+     </nav>
+     <body>
+     <button class = "primary lg round" id ="testingbutton" onclick="toggleNav()">Toggle Menu Here</button>
+
+     <header>
+          <div>
+               <span class="material-icons md-36" onclick="openNav()">tune</span>
+               <h3>Configurations</h3>
+               <span class="material-icons md-36">keyboard_double_arrow_right</span>
+               <h4>Retailer Network Management</h4>
+               <!--
+               <span class="material-icons md-36"  onclick="thisCouldDosomething()">keyboard_double_arrow_right</span>
+               <h4>Tier3</h4>
+               -->
+               
+          </div>
+          
+     </header>
+     <main>
+          <div class="pageTitle">
+               <h2>Retailer Network Management</h2>
+               <p>Search and manage retailers and health programs.</p>
+               <p>On the Retailers List tab, select a retailer and customize the list of eligible health plans & programs.</p>
+               <p>On the Programs List tab, select a health plan & program and customize the list of eligible retailers.</p>
+          </div>
+          <section>
+               <!-- Tab links -->
+                    <div class="tab">
+                         <button class="tablinks active" onclick="openTab(event, 'retailerslist')">
+                              <span class="material-icons md-36">shopping_cart</span>
+                              Retailers List
+                         </button>
+                         <button class="tablinks" onclick="openTab(event, 'programslist')">
+                              <span class="material-icons md-36">list</span>
+                              Programs List
+                         </button>
+                    </div>
+                    
+               <!-- Tab content -->
+                    <div id="retailerslist" class="tabcontent">
+                         <search>
+                              <label for="searchinput">Search</label><br>
+                              <input type="text" id="searchinput" name="searchinput" placeholder="Search by name, Merchant ID, and Merchant code">
+                         </search>
+                         <table>
+                              <tr>
+                                   <th>
+                                        <button class="plain contrast round">
+                                             <span class="material-icons"  onclick="thisCouldDosomething()">swap_vert</span>
+                                        </button>
+                                        <p>Name</p>
+                                        <button class="plain contrast round sm">
+                                             <span class="material-icons"  onclick="thisCouldDosomething()">
+                                                  info</span>
+                                        </button>  
+                                        
+                                   </th>
+                                   <th>
+                                        <button class="plain contrast round">
+                                             <span class="material-icons"  onclick="thisCouldDosomething()">swap_vert</span>
+                                        </button>
+                                        <p>Merchant ID</p>
+                                        <button class="plain contrast round sm">
+                                             <span class="material-icons"  onclick="thisCouldDosomething()">
+                                                  info</span>
+                                        </button>
+                                        
+                                   </th>
+                                   <th>
+                                        <button class="plain contrast round">
+                                             <span class="material-icons"  onclick="thisCouldDosomething()">swap_vert</span>
+                                        </button>
+                                        <p>Retailer Code</p>
+                                        <button class="plain contrast round sm">
+                                             <span class="material-icons"  onclick="thisCouldDosomething()">
+                                                  info</span>
+                                        </button>
+                                        
+                                   </th>
+                              </tr>
+                              <tr>
+                                   <td>Discount Drug Mart and it goes long? Will it possibly break into the next line?
+                                   </td>
+                                   <td>123453</td>
+                                   <td>2345454</td>
+                              </tr>
+                              <tr>
+                                   <td>Independent Retailers</td>
+                                   <td>1654565</td>
+                                   <td>15848947</td>
+                              </tr>
+                              <tr>
+                                   <td>Discount Drug Mart</td>
+                                   <td>123453</td>
+                                   <td>2345454</td>
+                              </tr>
+                              <tr>
+                                   <td>Independent Retailers</td>
+                                   <td>1654565</td>
+                                   <td>15848947</td>
+                              </tr>
+                              <tr>
+                                   <td>Discount Drug Mart</td>
+                                   <td>123453</td>
+                                   <td>2345454</td>
+                              </tr>
+                              <tr>
+                                   <td>Independent Retailers</td>
+                                   <td>1654565</td>
+                                   <td>15848947</td>
+                              </tr>
+                              <tr>
+                                   <td>Discount Drug Mart</td>
+                                   <td>123453</td>
+                                   <td>2345454</td>
+                              </tr>
+                              <tr>
+                                   <td>Independent Retailers</td>
+                                   <td>1654565</td>
+                                   <td>15848947</td>
+                              </tr>
+                              <tr>
+                                   <td>Discount Drug Mart</td>
+                                   <td>123453</td>
+                                   <td>2345454</td>
+                              </tr>
+                              <tr>
+                                   <td>Independent Retailers</td>
+                                   <td>1654565</td>
+                                   <td>15848947</td>
+                              </tr>
+                              <tr>
+                                   <td>Discount Drug Mart</td>
+                                   <td>123453</td>
+                                   <td>2345454</td>
+                              </tr>
+                              <tr>
+                                   <td>Independent Retailers</td>
+                                   <td>1654565</td>
+                                   <td>15848947</td>
+                              </tr>
+                         </table>
+                         <nav class="pagin">
+                              <p>Showing 1 to 12 of 560 entries</p>
+                              <div>
+                                   <button class="outline contrast">
+                                        <span class="material-icons md-36"  onclick="thisCouldDosomething()">keyboard_double_arrow_left</span>
+                                   </button>
+                                   <button class="outline contrast">
+                                        <span class="material-icons md-36"  onclick="thisCouldDosomething()">chevron_left</span>
+                                   </button>
+                                   <button class="outline contrast selected">1</button>
+                                   <button class="outline contrast">2</button>
+                                   <button class="outline contrast">3</button>
+                                   <button class="outline contrast">4</button>
+                                   <button class="outline contrast">5</button>
+                                   <button class="outline contrast">
+                                        <span class="material-icons md-36"  onclick="thisCouldDosomething()">chevron_right</span>
+                                   </button>
+                                   <button class="outline contrast">
+                                        <span class="material-icons md-36"  onclick="thisCouldDosomething()">keyboard_double_arrow_right
+                                        </span>
+                                   </button>
+                              </div>
+                              <input type="text" id="pagination" name="pagination" placeholder="1">
+                              <!--
+                                <input type="text" id="searchinput" name="searchinput">
+                              -->
+                                 
+                         </nav>
+                    </div>
+                    
+                    <div id="programslist" class="tabcontent">
+                         <search>
+                              <label for="searchinput">Search</label><br>
+                              <input type="text" id="searchinput" name="searchinput" placeholder="Search by name, Merchant ID, and Merchant code">
+                         </search>
+                         <table>
+                              <tr>
+                                   <th>
+                                        <button class="plain contrast round">
+                                             <span class="material-icons"  onclick="thisCouldDosomething()">swap_vert</span>
+                                        </button>
+                                        <p>Name</p>
+                                        <button class="plain contrast round sm">
+                                             <span class="material-icons"  onclick="thisCouldDosomething()">
+                                                  info</span>
+                                        </button>  
+                                        
+                                   </th>
+                                   <th>
+                                        <button class="plain contrast round">
+                                             <span class="material-icons"  onclick="thisCouldDosomething()">swap_vert</span>
+                                        </button>
+                                        <p>Merchant ID</p>
+                                        <button class="plain contrast round sm">
+                                             <span class="material-icons"  onclick="thisCouldDosomething()">
+                                                  info</span>
+                                        </button>
+                                        
+                                   </th>
+                                   <th>
+                                        <button class="plain contrast round">
+                                             <span class="material-icons"  onclick="thisCouldDosomething()">swap_vert</span>
+                                        </button>
+                                        <p>Retailer Code</p>
+                                        <button class="plain contrast round sm">
+                                             <span class="material-icons"  onclick="thisCouldDosomething()">
+                                                  info</span>
+                                        </button>
+                                        
+                                   </th>
+                              </tr>
+                              <tr>
+                                   <td>This is where all the programs list stuff appears.
+                                   </td>
+                                   <td>123453</td>
+                                   <td>2345454</td>
+                              </tr>
+                              <tr>
+                                   <td>Independent Retailers</td>
+                                   <td>1654565</td>
+                                   <td>15848947</td>
+                              </tr>
+                              <tr>
+                                   <td>Discount Drug Mart</td>
+                                   <td>123453</td>
+                                   <td>2345454</td>
+                              </tr>
+                              <tr>
+                                   <td>Independent Retailers</td>
+                                   <td>1654565</td>
+                                   <td>15848947</td>
+                              </tr>
+                              <tr>
+                                   <td>Discount Drug Mart</td>
+                                   <td>123453</td>
+                                   <td>2345454</td>
+                              </tr>
+                              <tr>
+                                   <td>Independent Retailers</td>
+                                   <td>1654565</td>
+                                   <td>15848947</td>
+                              </tr>
+                              <tr>
+                                   <td>Discount Drug Mart</td>
+                                   <td>123453</td>
+                                   <td>2345454</td>
+                              </tr>
+                              <tr>
+                                   <td>Independent Retailers</td>
+                                   <td>1654565</td>
+                                   <td>15848947</td>
+                              </tr>
+                              <tr>
+                                   <td>Discount Drug Mart</td>
+                                   <td>123453</td>
+                                   <td>2345454</td>
+                              </tr>
+                              <tr>
+                                   <td>Independent Retailers</td>
+                                   <td>1654565</td>
+                                   <td>15848947</td>
+                              </tr>
+                              <tr>
+                                   <td>Discount Drug Mart</td>
+                                   <td>123453</td>
+                                   <td>2345454</td>
+                              </tr>
+                              <tr>
+                                   <td>Independent Retailers</td>
+                                   <td>1654565</td>
+                                   <td>15848947</td>
+                              </tr>
+                         </table>
+                         <nav class="pagin">
+                              <p>Showing 1 to 12 of 560 entries</p>
+                              <div>
+                                   <button class="outline contrast">
+                                        <span class="material-icons md-36"  onclick="thisCouldDosomething()">keyboard_double_arrow_left</span>
+                                   </button>
+                                   <button class="outline contrast">
+                                        <span class="material-icons md-36"  onclick="thisCouldDosomething()">chevron_left</span>
+                                   </button>
+                                   <button class="outline contrast selected">1</button>
+                                   <button class="outline contrast">2</button>
+                                   <button class="outline contrast">3</button>
+                                   <button class="outline contrast">4</button>
+                                   <button class="outline contrast">5</button>
+                                   <button class="outline contrast">6</button>
+                                   <button class="outline contrast">
+                                        <span class="material-icons md-36"  onclick="thisCouldDosomething()">chevron_right</span>
+                                   </button>
+                                   <button class="outline contrast">
+                                        <span class="material-icons md-36"  onclick="thisCouldDosomething()">keyboard_double_arrow_right
+                                        </span>
+                                   </button>
+                              </div>
+                              <input type="text" id="pagination" name="pagination" placeholder="1">
+                              <!--
+                                <input type="text" id="searchinput" name="searchinput">
+                              -->
+                                 
+                         </nav>
+                    </div>
+          </section>
+     </main>
+                    
+     </body>
+</html>
+
+<!--
+
+<div>
+     <h1>H1: This is a test for the admin portal</h1>
+     <h2>H2 here wo go</h2>
+     <h3>H2 here wo go</h3>
+     <h4>H2 here wo go</h4>
+     <h5>H2 here wo go</h5>
+     <h6>H2 here wo go</h6>
+     <p>This is body text</p>
+</div>
+<div class="">
+     <button class="solid primary">
+          <span class="material-icons"  onclick="thisCouldDosomething()">
+               keyboard_double_arrow_left
+          </span>
+          Solid Button Primary Normal
+          <span class="material-icons"  onclick="thisCouldDosomething()">
+               keyboard_double_arrow_right
+          </span>
+     </button>
+     <button class="solid primary sm">
+          <span class="material-icons md-36"  onclick="thisCouldDosomething()">keyboard_double_arrow_left</span>
+          Solid Button Primary Small
+          <span class="material-icons"  onclick="thisCouldDosomething()">
+               keyboard_double_arrow_right
+          </span>
+     </button>
+     <button class="solid primary lg">
+          <span class="material-icons"  onclick="thisCouldDosomething()">
+               keyboard_double_arrow_left
+          </span>
+          Solid Button Primary Large
+          <span class="material-icons"  onclick="thisCouldDosomething()">
+               keyboard_double_arrow_right
+          </span>
+     </button>
+     <button class="solid primary raised">
+          <span class="material-icons"  onclick="thisCouldDosomething()">
+               keyboard_double_arrow_left
+          </span>
+          A Raised Button
+          <span class="material-icons"  onclick="thisCouldDosomething()">
+               keyboard_double_arrow_right
+          </span>
+     </button>
+</div>
+<div class="">
+     <button class="primary outline">
+          <span class="material-icons"  onclick="thisCouldDosomething()">
+               keyboard_double_arrow_left
+          </span>
+          Solid Button Primary Normal
+          <span class="material-icons"  onclick="thisCouldDosomething()">
+               keyboard_double_arrow_right
+          </span>
+     </button>
+     <button class=" primary outline sm">
+          <span class="material-icons md-36"  onclick="thisCouldDosomething()">keyboard_double_arrow_left</span>
+          Solid Button Primary Small
+          <span class="material-icons"  onclick="thisCouldDosomething()">
+               keyboard_double_arrow_right
+          </span>
+     </button>
+     <button class=" primary outline lg">
+          <span class="material-icons"  onclick="thisCouldDosomething()">
+               keyboard_double_arrow_left
+          </span>
+          Solid Button Primary Large
+          <span class="material-icons"  onclick="thisCouldDosomething()">
+               keyboard_double_arrow_right
+          </span>
+     </button>
+     <button class=" primary outline raised">
+          <span class="material-icons"  onclick="thisCouldDosomething()">
+               keyboard_double_arrow_left
+          </span>
+          A Raised Button
+          <span class="material-icons"  onclick="thisCouldDosomething()">
+               keyboard_double_arrow_right
+          </span>
+     </button>
+</div>
+<div class="">
+     <button class="solid secondary">
+          <span class="material-icons"  onclick="thisCouldDosomething()">
+               keyboard_double_arrow_left
+          </span>
+          Solid Button secondary Normal
+          <span class="material-icons"  onclick="thisCouldDosomething()">
+               keyboard_double_arrow_right
+          </span>
+     </button>
+     <button class="solid secondary sm">
+          <span class="material-icons md-36"  onclick="thisCouldDosomething()">keyboard_double_arrow_left</span>
+          Solid Button secondary Small
+          <span class="material-icons"  onclick="thisCouldDosomething()">
+               keyboard_double_arrow_right
+          </span>
+     </button>
+     <button class="solid secondary lg">
+          <span class="material-icons"  onclick="thisCouldDosomething()">
+               keyboard_double_arrow_left
+          </span>
+          Solid Button secondary Large
+          <span class="material-icons"  onclick="thisCouldDosomething()">
+               keyboard_double_arrow_right
+          </span>
+     </button>
+     <button class="solid secondary raised">
+          <span class="material-icons"  onclick="thisCouldDosomething()">
+               keyboard_double_arrow_left
+          </span>
+          A Raised Button
+          <span class="material-icons"  onclick="thisCouldDosomething()">
+               keyboard_double_arrow_right
+          </span>
+     </button>
+</div>
+<div class="">
+     <button class="secondary outline">
+          <span class="material-icons"  onclick="thisCouldDosomething()">
+               keyboard_double_arrow_left
+          </span>
+          Solid Button secondary Normal
+          <span class="material-icons"  onclick="thisCouldDosomething()">
+               keyboard_double_arrow_right
+          </span>
+     </button>
+     <button class=" secondary outline sm">
+          <span class="material-icons md-36"  onclick="thisCouldDosomething()">keyboard_double_arrow_left</span>
+          Solid Button secondary Small
+          <span class="material-icons"  onclick="thisCouldDosomething()">
+               keyboard_double_arrow_right
+          </span>
+     </button>
+     <button class=" secondary outline lg">
+          <span class="material-icons"  onclick="thisCouldDosomething()">
+               keyboard_double_arrow_left
+          </span>
+          Solid Button secondary Large
+          <span class="material-icons"  onclick="thisCouldDosomething()">
+               keyboard_double_arrow_right
+          </span>
+     </button>
+     <button class=" secondary outline raised">
+          <span class="material-icons"  onclick="thisCouldDosomething()">
+               keyboard_double_arrow_left
+          </span>
+          A Raised Button
+          <span class="material-icons"  onclick="thisCouldDosomething()">
+               keyboard_double_arrow_right
+          </span>
+     </button>
+</div>
+<div class="">
+     <button class="contrast solid">
+          <span class="material-icons"  onclick="thisCouldDosomething()">
+               keyboard_double_arrow_left
+          </span>
+          Solid Button contrast Normal
+          <span class="material-icons"  onclick="thisCouldDosomething()">
+               keyboard_double_arrow_right
+          </span>
+     </button>
+     <button class=" contrast solid sm">
+          <span class="material-icons md-36"  onclick="thisCouldDosomething()">keyboard_double_arrow_left</span>
+          Solid Button contrast Small
+          <span class="material-icons"  onclick="thisCouldDosomething()">
+               keyboard_double_arrow_right
+          </span>
+     </button>
+     <button class=" contrast solid lg">
+          <span class="material-icons"  onclick="thisCouldDosomething()">
+               keyboard_double_arrow_left
+          </span>
+          Solid Button contrast Large
+          <span class="material-icons"  onclick="thisCouldDosomething()">
+               keyboard_double_arrow_right
+          </span>
+     </button>
+     <button class=" contrast solid raised">
+          <span class="material-icons"  onclick="thisCouldDosomething()">
+               keyboard_double_arrow_left
+          </span>
+          A Raised Button
+          <span class="material-icons"  onclick="thisCouldDosomething()">
+               keyboard_double_arrow_right
+          </span>
+     </button>
+</div>
+-->
