@@ -249,6 +249,8 @@ body {
 }
 
 #Sidenav {
+     overflow: hidden;
+     transition: .35s;
      position: fixed;
      left: 0px;
      width: 320px;
@@ -265,6 +267,8 @@ body {
           padding: 1rem;
           gap: .5rem;
           font-size: 1.5rem;
+          width: 18rem;
+
      }
      & h3 {
           color: var(--surface-0);
@@ -279,7 +283,7 @@ body {
           font-size: 1.5rem;
           padding: .25rem 1rem;
           & button {
-               display: none;
+               display:none;
           }
           & h3 {
                opacity:.3;
@@ -289,6 +293,7 @@ body {
           & li {
                transition: .25s;
                display: flex;
+               height: 5rem;
                align-items: center;
                gap: 1rem;
                padding: 1rem;
@@ -315,7 +320,17 @@ body {
      & .secondnav {
           color: pink;
      }
-     
+     &.close {
+          width: 60px;
+          & h3 {
+               color:red;
+               visibility: hidden;
+          }
+          & li p {
+               color: red;
+               visibility: hidden;
+          }
+     }
 }
 
 header {
@@ -357,7 +372,11 @@ section {
      display: flex;
      flex-direction: column;
      gap: 1.5rem;
-     padding: 1.5rem;     
+     padding: 1.5rem;
+     
+     & #programslist {
+          display: none;
+     }
 }
 
 .tab {
