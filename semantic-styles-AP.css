@@ -244,7 +244,6 @@ input{
 body {
      transition: .5s;
      margin-left: 320px;
-     padding: ;
      background-color: var(--bluegray-50);
 }
 
@@ -462,7 +461,6 @@ table {
           }
           & button:first-child {
                float: right;
-               margin-top: 
           }
      }
      & tr {
@@ -485,7 +483,6 @@ table {
 }
 
 .pagin {
-     background-color: ;
      display: flex;
      flex-direction: row;
      justify-content: center;
@@ -494,7 +491,6 @@ table {
      gap: 1rem;
      margin: -1px;
      & p {
-          background-color: ;
           font-size: 1rem;
           margin-bottom: 1.25rem;
      }
@@ -502,7 +498,6 @@ table {
           width: 10px;
      }
      & div {
-          background-color: ;
           display: flex;
           & button.contrast {
                margin: -1px;
