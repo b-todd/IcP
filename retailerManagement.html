@@ -9,73 +9,82 @@
           <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&icon_names=favorite,home,search,settings" rel="stylesheet" />
      </head>
 
-     <nav class="" id="Sidenav" onclick="toggleNav()">
-          <ul>
-               <div class="navtitle" >
+     <nav class="" id="Sidenav" onclick="">
+          <div class="navtitle">
+               <div class="platformName" >
                     <span class="material-icons md-36">tune</span>
                     <h3 id="navtitle">Admin Portal</h3>
                </div>
                <div class="menuName" id="menuName">
                     <h3 >Menu</h3>
-                    <button class="solid primary" onclick="toggleNav()">
-                         Close
-                         <span class="material-icons md-36">close</span>
+                    <button class="outline primary round lg" id="navToggle" onclick="toggleNav()">
+                         <span class="material-icons md-36">logout</span>
                     </button>
                </div>
-               
+          </div>
+          <ul class="primenav">         
                <li>
                     <span class="material-icons md-36"  >star</span>
                     <p>Quick Access</p>
-                    <span class="material-icons md-36"  >chevron_right</span>
+                    <span class="material-icons md-36 carrot"  >chevron_right</span>
                </li>
                <li>
                     <span class="material-icons md-36">group</span>
                     <p>Customers</p>
-                    <span class="material-icons md-36">chevron_right</span>
+                    <span class="material-icons md-36 carrot">chevron_right</span>
                </li>
                <li>
                     <span class="material-icons md-36">bolt</span>
                     <p>Operations</p>
-                    <span class="material-icons md-36">chevron_right</span>
+                    <span class="material-icons md-36 carrot">chevron_right</span>
                </li>
                <li>
                     <span class="material-icons md-36">notifications</span>
                     <p>Notifications</p>
-                    <span class="material-icons md-36">chevron_right</span>
+                    <span class="material-icons md-36 carrot">chevron_right</span>
                </li>
                <li>
                     <span class="material-icons md-36">tune</span>
                     <p>Configurations</p>
-                    <span class="material-icons md-36">chevron_right</span>
+                    <span class="material-icons md-36 carrot">chevron_right</span>
                </li>
                <li>
                     <span class="material-icons md-36">leaderboard</span>
                     <p>Reports</p>
-                    <span class="material-icons md-36">chevron_right</span>
+                    <span class="material-icons md-36 carrot">chevron_right</span>
                </li>
                <li>
                     <span class="material-icons md-36">payments</span>
                     <p>Finance</p>
-                    <span class="material-icons md-36">chevron_right</span>
+                    <span class="material-icons md-36 carrot">chevron_right</span>
                </li>
                <li>
                     <span class="material-icons md-36">cloud_upload</span>
                     <p>Submission Manager</p>
-                    <span class="material-icons md-36">chevron_right</span>
+                    <span class="material-icons md-36 carrot">chevron_right</span>
                </li>
           </ul>
           <ul class="secondnav">
                <li>
+                    <!--
                     <span class="material-icons md-36">star</span>
-                    <p>John Smith <br>
-                    jsmith@incomm.com</p>
+                    -->
+                    <div class="userInfo">
+                         <p class="name">John Smith </p>
+                         <p class="email">jsmith@incomm.com</p>
+                    </div>
+                    
                </li>
                <li>
+                    <!--
                     <span class="material-icons md-36">settings</span>
+                    -->
                     <p>Accounts & Settings</p>
                </li>
                <li>
+                    <!--
                     <span class="material-icons md-36">logout</span>
+                    -->
                     <p>Log Out</p>
 
                </li>
