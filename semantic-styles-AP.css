@@ -334,6 +334,7 @@ body {
 
      }
      & li {
+          transition: .35s;
           display: flex;
           height: 4rem;
           align-items: center;
@@ -351,7 +352,7 @@ body {
                background-color: hsl(var(--primary-h), var(--primary-s), calc(var(--primary-b) - 25%));
           }
           &:active {
-               background-color: hsl(var(--primary-h), var(--primary-s), calc(var(--primary-b) - 20%));
+               background-color: hsl(var(--primary-h), var(--primary-s), calc(var(--primary-b) - 35%));
                outline: 2px solid hsl(var(--primary-h), var(--primary-s), calc(var(--primary-b) + 30%));
           }
      }
@@ -523,6 +524,26 @@ table {
      & td {
           padding: .875rem;
           border-bottom: 1px solid var(--bluegray-100);
+     }
+}
+
+#programslist {
+     & table tr :first-child {
+          max-width: 10rem;
+     }
+     & tbody {
+
+          & tr  {
+               
+               & p:first-child {
+                    margin-top: -1rem;
+                    font-size: .8rem;
+               }
+               & p:last-child {
+                    margin-top: -1rem;
+                    font-weight: 500;
+               }
+          }
      }
 }
 

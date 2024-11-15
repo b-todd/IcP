@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
      <head>
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
           <script type="text/javascript" src="interactions.js"></script>
           <link rel="stylesheet" href="base-styles.css">
           <link rel="stylesheet" href="semantic-styles-AP.css">
@@ -117,11 +118,14 @@
           <section>
                <!-- Tab links -->
                     <div class="tab">
-                         <button class="tablinks active" onclick="openTab(event, 'retailerslist')">
+                         <button
+                         class="tablinks active" onclick="openTab(event, 'retailerslist')">
                               <span class="material-icons md-36">shopping_cart</span>
                               Retailers List
                          </button>
-                         <button class="tablinks" onclick="openTab(event, 'programslist')">
+                         <button
+                         class="tablinks"
+                         onclick="openTab(event, 'programslist')">
                               <span class="material-icons md-36">list</span>
                               Programs List
                          </button>
@@ -169,67 +173,9 @@
                                         
                                    </th>
                               </tr>
-                              <tr>
-                                   <td>Discount Drug Mart and it goes long? Will it possibly break into the next line?
-                                   </td>
-                                   <td>123453</td>
-                                   <td>2345454</td>
-                              </tr>
-                              <tr>
-                                   <td>Independent Retailers</td>
-                                   <td>1654565</td>
-                                   <td>15848947</td>
-                              </tr>
-                              <tr>
-                                   <td>Discount Drug Mart</td>
-                                   <td>123453</td>
-                                   <td>2345454</td>
-                              </tr>
-                              <tr>
-                                   <td>Independent Retailers</td>
-                                   <td>1654565</td>
-                                   <td>15848947</td>
-                              </tr>
-                              <tr>
-                                   <td>Discount Drug Mart</td>
-                                   <td>123453</td>
-                                   <td>2345454</td>
-                              </tr>
-                              <tr>
-                                   <td>Independent Retailers</td>
-                                   <td>1654565</td>
-                                   <td>15848947</td>
-                              </tr>
-                              <tr>
-                                   <td>Discount Drug Mart</td>
-                                   <td>123453</td>
-                                   <td>2345454</td>
-                              </tr>
-                              <tr>
-                                   <td>Independent Retailers</td>
-                                   <td>1654565</td>
-                                   <td>15848947</td>
-                              </tr>
-                              <tr>
-                                   <td>Discount Drug Mart</td>
-                                   <td>123453</td>
-                                   <td>2345454</td>
-                              </tr>
-                              <tr>
-                                   <td>Independent Retailers</td>
-                                   <td>1654565</td>
-                                   <td>15848947</td>
-                              </tr>
-                              <tr>
-                                   <td>Discount Drug Mart</td>
-                                   <td>123453</td>
-                                   <td>2345454</td>
-                              </tr>
-                              <tr>
-                                   <td>Independent Retailers</td>
-                                   <td>1654565</td>
-                                   <td>15848947</td>
-                              </tr>
+                              <tbody id="retailerslistcontentTable">
+                              </tbody>
+                              
                          </table>
                          <nav class="pagin">
                               <p>Showing 1 to 12 of 560 entries</p>
@@ -272,7 +218,7 @@
                                         <button class="plain contrast round">
                                              <span class="material-icons"  onclick="thisCouldDosomething()">swap_vert</span>
                                         </button>
-                                        <p>Name</p>
+                                        <p>Health Plan</p>
                                         <button class="plain contrast round sm">
                                              <span class="material-icons"  onclick="thisCouldDosomething()">
                                                   info</span>
@@ -283,18 +229,7 @@
                                         <button class="plain contrast round">
                                              <span class="material-icons"  onclick="thisCouldDosomething()">swap_vert</span>
                                         </button>
-                                        <p>Merchant ID</p>
-                                        <button class="plain contrast round sm">
-                                             <span class="material-icons"  onclick="thisCouldDosomething()">
-                                                  info</span>
-                                        </button>
-                                        
-                                   </th>
-                                   <th>
-                                        <button class="plain contrast round">
-                                             <span class="material-icons"  onclick="thisCouldDosomething()">swap_vert</span>
-                                        </button>
-                                        <p>Retailer Code</p>
+                                        <p>Program</p>
                                         <button class="plain contrast round sm">
                                              <span class="material-icons"  onclick="thisCouldDosomething()">
                                                   info</span>
@@ -302,67 +237,9 @@
                                         
                                    </th>
                               </tr>
-                              <tr>
-                                   <td>This is where all the retailers list stuff appears. Will it possibly break into the next line?
-                                   </td>
-                                   <td>123453</td>
-                                   <td>2345454</td>
-                              </tr>
-                              <tr>
-                                   <td>Independent Retailers</td>
-                                   <td>1654565</td>
-                                   <td>15848947</td>
-                              </tr>
-                              <tr>
-                                   <td>Discount Drug Mart</td>
-                                   <td>123453</td>
-                                   <td>2345454</td>
-                              </tr>
-                              <tr>
-                                   <td>Independent Retailers</td>
-                                   <td>1654565</td>
-                                   <td>15848947</td>
-                              </tr>
-                              <tr>
-                                   <td>Discount Drug Mart</td>
-                                   <td>123453</td>
-                                   <td>2345454</td>
-                              </tr>
-                              <tr>
-                                   <td>Independent Retailers</td>
-                                   <td>1654565</td>
-                                   <td>15848947</td>
-                              </tr>
-                              <tr>
-                                   <td>Discount Drug Mart</td>
-                                   <td>123453</td>
-                                   <td>2345454</td>
-                              </tr>
-                              <tr>
-                                   <td>Independent Retailers</td>
-                                   <td>1654565</td>
-                                   <td>15848947</td>
-                              </tr>
-                              <tr>
-                                   <td>Discount Drug Mart</td>
-                                   <td>123453</td>
-                                   <td>2345454</td>
-                              </tr>
-                              <tr>
-                                   <td>Independent Retailers</td>
-                                   <td>1654565</td>
-                                   <td>15848947</td>
-                              </tr>
-                              <tr>
-                                   <td>Discount Drug Mart</td>
-                                   <td>123453</td>
-                                   <td>2345454</td>
-                              </tr>
-                              <tr>
-                                   <td>Independent Retailers</td>
-                                   <td>1654565</td>
-                                   <td>15848947</td>
-                              </tr>
+                              <tbody id="programslistcontentTable">
+
+                              </tbody>
                          </table>
                          <nav class="pagin">
                               <p>Showing 1 to 12 of 560 entries</p>
@@ -378,7 +255,6 @@
                                    <button class="outline contrast">3</button>
                                    <button class="outline contrast">4</button>
                                    <button class="outline contrast">5</button>
-                                   <button class="outline contrast">6</button>
                                    <button class="outline contrast">
                                         <span class="material-icons md-36"  onclick="thisCouldDosomething()">chevron_right</span>
                                    </button>
