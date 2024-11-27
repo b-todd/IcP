@@ -1,0 +1,15 @@
+{
+  "name": "icp",
+  "version": "1.0.0",
+  "description": "24_11_14, this is a test, i wonder if this will add to the project properly...",
+  "main": "interactions.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "firebase": "^11.0.2"
+  }
+}
